@@ -1,0 +1,15 @@
+{
+  "name": "websocket-server",
+  "version": "1.0.0",
+  "description": "WebSocket server",
+  "main": "src/websocket-server.js",
+  "scripts": {
+    "start": "node src/websocket-server.js",
+    "build": "tsc && npm run copy-files",
+    "copy-files": "npx copyfiles -u 4 '../handlers/config/schema-files/**/*' '../dist/handlers/config/schema-files/'"  
+  },
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "ws": "^7.4.6"
+  }
+}
